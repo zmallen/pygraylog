@@ -39,7 +39,6 @@ class GraylogAPI(object):
 
     def _get(self, **kwargs):
         headers = self.build_auth_header()
-        import pdb; pdb.set_trace()
         r = requests.get(self.url, params=kwargs, headers=headers)
         return r.json()
 
@@ -62,6 +61,5 @@ class GraylogAPI(object):
         for arg in required_args:
             if arg in kwargs and arg[-1] == '_':
                 kwargs[arg[:-1]] = kwargs.pop(arg)
-        import pdb; pdb.set_trace()
         res = self.methods[method](**kwargs)
         return res
