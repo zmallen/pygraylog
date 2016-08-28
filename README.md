@@ -8,7 +8,7 @@ The purpose of this code is to provide a lightweight wrapper to GraylogAPI. It p
 
 Install this library, then import the GraylogAPI class.
 
-`import pygraylog.GraylogAPI`
+`from pygraylog.graylogapi import GraylogAPI`
 
 Then, make an object with your base Graylog URL and username and password for auth
 
@@ -32,4 +32,4 @@ Notice that each argument here is listed in `endpoints.py` as required,  but you
 
 ### As a library
 * `pip install pygraylog` 
-* `import pygraylog.GraylogAPI`
+* `from pygraylog.graylogapi import GraylogAPI`
