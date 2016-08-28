@@ -1,2 +1,2 @@
 import endpoints
-import pygraylog
+import graylogapi
