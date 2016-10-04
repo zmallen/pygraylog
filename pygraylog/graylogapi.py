@@ -40,7 +40,9 @@ class GraylogAPI(object):
     def _get(self, **kwargs):
         headers = self.build_auth_header()
         r = requests.get(self.url, params=kwargs, headers=headers)
-        return r.json()
+
+        return r.text
+
 
     def _post(self, **kwargs):
         raise NotImplementedError('POST not implemented')
