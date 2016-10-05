@@ -27,6 +27,7 @@ def test_auth_header():
     header = api.build_auth_header()
     payload = 'Zack' + ':' + 'Zack' 
     header_test = {
-        'Authorization': 'Basic ' + base64.b64encode(payload)
+        'Authorization' : 'Basic ' + base64.b64encode(payload),
+        'Accept' : 'application/json'
     }
     assert header == header_test
