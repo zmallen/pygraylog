@@ -6,9 +6,7 @@ def test_get():
         username = 'Zack',
         password = 'Zack')
     res = api._get()
-    expected = {
-        'one':  'two'
-    }
+    expected = "{\"one\": \"two\"}\n"
     assert res == expected
 
 def test_post():
