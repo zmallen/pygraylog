@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='pygraylog',
-      version='0.2',
+      version='0.3',
       description='Graylog API wrapper for python',
       author='Zack Allen',
       author_email='zma4580@gmail.com',

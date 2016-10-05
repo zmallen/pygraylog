@@ -33,7 +33,8 @@ class GraylogAPI(object):
     def build_auth_header(self):
         payload = self.username + ':' + self.password
         header = {
-            'Authorization' : 'Basic ' + base64.b64encode(payload)
+            'Authorization' : 'Basic ' + base64.b64encode(payload),
+            'Accept' : 'application/json'
         }
         return header
 
