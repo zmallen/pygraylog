@@ -1,6 +1,6 @@
 # pygraylog - API Wrapper for Graylog 2.0
 
-[![Build Status](https://travis-ci.org/zmallen/pygraylog.svg?branch=zma%2Fadd_tests)](https://travis-ci.org/zmallen/pygraylog)
+[![Build Status](https://travis-ci.org/zmallen/pygraylog.svg?branch=zma%2Fadd_tests)](https://travis-ci.org/zmallen/pygraylog) [![PyPI](https://img.shields.io/pypi/v/pygraylog.svg)](https://pypi.python.org/pypi/pygraylog)
 
 The purpose of this code is to provide a lightweight wrapper to GraylogAPI. It provides standard access to the Graylog 2.0 API endpoints, and it will tell you if you are missing a specific field when calling it. 
 
