@@ -4,6 +4,11 @@ from endpoints import endpoints
 from urlparse import urlparse
 class GraylogAPI(object):
     def __init__(self, url, username=None, password=None, api_key=None):
+
+        # check if the username / password vs. api_key cannot be provided at same time
+        if username is not None and api_key is not None:
+            raise ValueError('username / api_key cannot be provided at same time')
+            
         self.url = url
         self._path = urlparse(self.url).path
         self.username = username
@@ -31,7 +36,13 @@ class GraylogAPI(object):
             return self._(name)
 
     def build_auth_header(self):
-        payload = self.username + ':' + self.password
+        
+        # use the api_key if it is been provided
+        if self.api_key is not None:
+            payload = self.api_key + ':token'
+        else:
+            payload = self.username + ':' + self.password
+            
         header = {
             'Authorization' : 'Basic ' + base64.b64encode(payload),
             'Accept' : 'application/json'

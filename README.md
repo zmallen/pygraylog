@@ -14,6 +14,10 @@ Then, make an object with your base Graylog URL and username and password for au
 
 `api = pygraylog.GraylogAPI('https://localhost:12900', username='foo', password='foo')`
 
+For good security practics, use token based access as following
+
+`api = pygraylog.GraylogAPI('https://localhost:12900', api_key='xopqoiwepmd1o23m9awuaspofp')`
+
 Then, check out `pygraylog/endpoints.py` to see which endpoints are implemented/enforced by this library and make your API call.
 
 `api.search.universal.absolute.get(fields="src_ip", query="*", from_='1970-01-01 00:00:00', to='1970-01-01 23:59:59')`  
